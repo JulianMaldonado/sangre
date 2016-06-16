@@ -17,7 +17,7 @@
             Using Banco1 As MD5 = MD5.Create()
                 hash = BancoSangre._ObtieneMd5Hash(Banco1, txtPass.Text)
                 Session("pass") = hash
-                query = "SELECT id_empleado, nombre, apellido, sexo, direccion, telefono, fecha_nacimiento, fecha_alta, usuario, pass from empleado where usuario = '" & txtUsuario.Text.ToLower & "' AND  pass= '" & hash & "'"
+                query = "SELECT id_empleado, nombre, apellido, sexo, direccion, telefono, fecha_nacimiento, fecha_alta, usuario, pass,id_nivel from empleado where usuario = '" & txtUsuario.Text.ToLower & "' AND  pass= '" & hash & "'"
             End Using
             Dim r As OracleDataReader
             Try
@@ -35,10 +35,11 @@
                         Session("fecha_alta") = r(7)
                         Session("usuario") = r(8)
                         Session("pass") = r(9)
+                        Session("id_nivel") = r(10)
                     End While
-                    Session("EsCliente") = 1
+
                     r.Close()
-                    FormsAuthentication.RedirectFromLoginPage(txtUsuario.Text, False)
+                    FormsAuthentication.RedirectFromLoginPage(txtUsuario.Text, True)
                 End If
             Catch ex As Exception
                 lblmsg.Text = "Error " + ex.Message.ToString
