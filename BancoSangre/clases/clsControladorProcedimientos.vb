@@ -912,15 +912,15 @@ Public Class clsControladorProcedimientos
     End Function
 
 
-    Public Function fListarProveedores() As DataTable
+    Public Function fListarGrupoSanguineo() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
             With bd._Cmd
                 .Connection = bd.ObtenerConexion
-                .CommandType = CommandType.StoredProcedure
-                .CommandText = "[dbo].[spListarProveedores]"
+                .CommandType = CommandType.Text
+                .CommandText = "select id_factor, descripcion from GRUPO_SANGUINEO"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception

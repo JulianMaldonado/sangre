@@ -82,9 +82,9 @@
                             Icon="ApplicationDouble" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu2" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="miTipoLugar" runat="server" Text="Tipo Lugar" Icon="BookEdit">
+                                    <ext:MenuItem ID="miGruposanguineo" runat="server" Text="Grupo Sanguineo" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id11', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id11', 'catalogos/frmGrupoSanguineo.aspx','Catálogo Grupo Sanguineo',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                     <ext:MenuItem ID="miProveedores" runat="server" Text="Proveedores" Icon="BookEdit">

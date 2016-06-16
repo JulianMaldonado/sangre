@@ -155,6 +155,8 @@
     <Content Include="App_Readme\Transformer.NET\README.txt" />
     <Content Include="Ext.NET.Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="paginas\catalogos\frmGrupoSanguineo.aspx" />
+    <Content Include="paginas\catalogos\frmItemGrupoSanguineo.aspx" />
     <Content Include="paginas\error\error404.aspx" />
     <Content Include="paginas\index.aspx" />
     <Content Include="paginas\Inicio.aspx" />
@@ -204,6 +206,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmGrupoSanguineo.aspx.designer.vb">
+      <DependentUpon>frmGrupoSanguineo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmGrupoSanguineo.aspx.vb">
+      <DependentUpon>frmGrupoSanguineo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmItemGrupoSanguineo.aspx.designer.vb">
+      <DependentUpon>frmItemGrupoSanguineo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmItemGrupoSanguineo.aspx.vb">
+      <DependentUpon>frmItemGrupoSanguineo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="paginas\error\error404.aspx.designer.vb">
       <DependentUpon>error404.aspx</DependentUpon>
