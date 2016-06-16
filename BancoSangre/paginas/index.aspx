@@ -133,7 +133,7 @@
 
                                      <ext:MenuItem ID="miInventario" runat="server" Text="Inventario" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id25', 'operaciones/frmInventario.aspx','I ',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id25', 'operaciones/frmInventario.aspx','Inventario ',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
 

@@ -73,6 +73,7 @@ Public Class index
                 miDonacion.Visible = True
                 miInventario.Visible = True
                 mpReporteria.Visible = False
+                mpCatalogos1.Visible = False
 
 
 

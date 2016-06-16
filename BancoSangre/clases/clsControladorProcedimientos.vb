@@ -929,6 +929,59 @@ Public Class clsControladorProcedimientos
         End Try
         Return dt
     End Function
+    Public Function fListarInventarios() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandType = CommandType.Text
+                .CommandText = "select i.id_almacen, i.id_factor, a.nombre as almacen, f.descripcion as factor, i.stock
+                                   from inventario.i
+                                   innerjoin grupo_sanguineo.f
+                                    on f.id_factor = i.id_factor
+                                   innerjoin almacen.a
+                                    on a.id_almacen = i.id_almacen"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+
+    Public Function fListarHistorial() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandType = CommandType.Text
+                .CommandText = "select h.id_almacen, h.id_factor, a.nombre as almacen, f.descripcion as factor, h.fecha, h.descripcion, h.movimiento, h.stock, e.usuario,
+                                   from historial h
+                                   inner join grupo_sanguineo f
+                                    on f.id_factor = h.id_factor
+                                   inner join almacen a
+                                    on a.id_almacen = h.id_almacen
+                                   inner join empleado e
+                                    on e.id_empleado = h.id_empleado"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+
+
+
+
+
+
     Public Function fListarDonantes() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
