@@ -167,6 +167,7 @@
     <Content Include="paginas\catalogos\frmDonante.aspx" />
     <Content Include="paginas\catalogos\frmEmpleado.aspx" />
     <Content Include="paginas\catalogos\frmGrupoSanguineo.aspx" />
+    <Content Include="paginas\catalogos\frmItemDonante.aspx" />
     <Content Include="paginas\catalogos\frmItemGrupoSanguineo.aspx" />
     <Content Include="paginas\error\error404.aspx" />
     <Content Include="paginas\index.aspx" />
@@ -291,6 +292,13 @@
     </Compile>
     <Compile Include="paginas\catalogos\frmGrupoSanguineo.aspx.vb">
       <DependentUpon>frmGrupoSanguineo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmItemDonante.aspx.designer.vb">
+      <DependentUpon>frmItemDonante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmItemDonante.aspx.vb">
+      <DependentUpon>frmItemDonante.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="paginas\catalogos\frmItemGrupoSanguineo.aspx.designer.vb">
