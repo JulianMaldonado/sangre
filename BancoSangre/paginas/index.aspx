@@ -92,12 +92,12 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id12', 'catalogos/frmDonante.aspx','Catálogo Donantes',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                    <ext:MenuItem ID="miAlmacen" runat="server" Text="Almacen" Icon="Box">
+                                    <ext:MenuItem ID="miAlmacen" runat="server" Text="Almacen" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id13', 'catalogos/frmAlmacen.aspx','Catálogo Almacenes',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                    <ext:MenuItem ID="miEmpleado" runat="server" Text="Empleado" Icon="Box">
+                                    <ext:MenuItem ID="miEmpleado" runat="server" Text="Empleado" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id14', 'catalogos/frmEmpleado.aspx','Catálogo Empleados',  this);" />
                                         </Listeners>
@@ -109,7 +109,7 @@
                         </ext:MenuPanel>
                         <ext:MenuPanel ID="mpOperaciones2" runat="server"
                             Title="Operaciones" Collapsed="true"
-                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            Icon="ApplicationDouble" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu3" runat="server">
                                 <Items>
                                  
@@ -125,7 +125,7 @@
                                         </Listeners>
                                     </ext:MenuItem>
                                  
-                                    <ext:MenuItem ID="miDonacion" runat="server" Text="Ingreso de Ventas" Icon="BookEdit">
+                                    <ext:MenuItem ID="miDonacion" runat="server" Text="Ingreso de Donaciones" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id24', 'operaciones/frmDonacion.aspx','Ingreso De Donaciones',  this);" />
                                         </Listeners>
@@ -137,28 +137,17 @@
                                         </Listeners>
                                     </ext:MenuItem>
 
-
-
+                                    
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
-                        <ext:MenuPanel ID="mireporteria" runat="server"
-                            Title="Venta" Collapsed="true"
-                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                        <ext:MenuPanel ID="mpReporteria" runat="server"
+                            Title="Reporteria" Collapsed="true"
+                            Icon="ApplicationDouble" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu4" runat="server">
-                                <Items>
-                                    <ext:MenuItem ID="miVentas" runat="server" Text="Nueva Venta" Icon="CoinsAdd">
-                                        <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id31', 'Paginas/Ventas/frmVentaContado.aspx','Nueva Venta Contado',  this);" />
-                                        </Listeners>
-                                    </ext:MenuItem>
-                                </Items>
+                                
                             </Menu>
                         </ext:MenuPanel>
-                     
-
-
-
                     </Items>
                 </ext:Panel>
             </Items>
@@ -166,4 +155,3 @@
     </form>
 </body>
 </html>
-
