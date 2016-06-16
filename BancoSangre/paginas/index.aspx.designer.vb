@@ -176,13 +176,13 @@ Partial Public Class index
     Protected WithEvents mpCatalogos1 As Global.Ext.Net.MenuPanel
     
     '''<summary>
-    '''Control miTipoLugar.
+    '''Control miGruposanguineo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miTipoLugar As Global.Ext.Net.MenuItem
+    Protected WithEvents miGruposanguineo As Global.Ext.Net.MenuItem
     
     '''<summary>
     '''Control miProveedores.

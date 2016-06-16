@@ -21,7 +21,7 @@ Public Class index
         mostrarMenu()
     End Sub
     Private Sub ocultarMenu()
-        miTipoLugar.Visible = False
+        miGruposanguineo.Visible = False
         miProveedores.Visible = False
         miFamilia.Visible = False
         miMaterial.Visible = False
@@ -76,7 +76,7 @@ Public Class index
                         miLibroDiario.Visible = True
 
                     Case 4
-                        miTipoLugar.Visible = True
+                        miGruposanguineo.Visible = True
                         miProveedores.Visible = True
                         miFamilia.Visible = True
                         miMaterial.Visible = True
