@@ -71,7 +71,7 @@
                             </Loader>
                         </ext:Panel>
                     </Items>
-                </ext:TabPanel>
+                </ext:TabPanel> 
                 <ext:Panel ID="pnlOeste" runat="server" Region="West"
                     Width="210" Collapsible="true" Split="true"
                     MinWidth="175" MaxWidth="400" MarginSpec="5 0 5 5"
