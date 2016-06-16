@@ -43,9 +43,9 @@
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
                                 <ext:ToolbarSeparator />
                   
-                                <ext:Button ID="btnNuevoModelo" runat="server" Width="160" Text="Agregar Modelo" Icon="Add">
+                                <ext:Button ID="btnNuevoModelo" runat="server" Width="160" Text="Nuevo Donante" Icon="Add">
                                     <Listeners>
-                                        <Click Handler="App.direct.fcrearVentanaDonante(1, 0,0,0,'','','','','')"></Click>
+                                        <Click Handler="App.direct.fcrearVentanaDonante(0, 0,0,0,'','','','','','','','')"></Click>
                                     </Listeners>
                                 </ext:Button>
                                 <ext:ToolbarSeparator />
@@ -58,23 +58,23 @@
                     <ColumnModel ID="ColumnModel1" runat="server">
                         <Columns>
                             <ext:Column ID="Column1" runat="server" DataIndex="ID_DONANTE" Text="Codigo" Visible="true" Width="80" />
-                            <ext:Column ID="Column3" runat="server" DataIndex="FACTOR" Text="Proveedor" Flex="1" />
-                            <ext:Column ID="Column4" runat="server" DataIndex="DPI" Text="Familia" Flex="1" />
-                            <ext:Column ID="Column5" runat="server" DataIndex="NOMBRE" Text="Material" Flex="1" />
-                            <ext:Column ID="Column6" runat="server" DataIndex="APELLIDO" Text="Descripcion" Flex="1" />
-                            <ext:Column ID="Column2" runat="server" DataIndex="SEXO" Text="Precio Compra" Flex="1" />
-                            <ext:Column ID="Column7" runat="server" DataIndex="DIRECCION" Text="Precio Venta" Flex="1" />
-                            <ext:Column ID="Column9" runat="server" DataIndex="FECHA_NACIMIENTO" Text="Precio Venta" Flex="1" />
-                            <ext:Column ID="Column10" runat="server" DataIndex="TELEFONO1" Text="Precio Venta" Flex="1" />
-                            <ext:Column ID="Column11" runat="server" DataIndex="TELEFONO2" Text="Precio Venta" Flex="1" />
-                            <ext:Column ID="Column12" runat="server" DataIndex="EMAIL" Text="Precio Venta" Flex="1" />
+                            <ext:Column ID="Column3" runat="server" DataIndex="FACTOR" Text="Factor" Flex="1" />
+                            <ext:Column ID="Column4" runat="server" DataIndex="DPI" Text="DPI" Flex="1" />
+                            <ext:Column ID="Column5" runat="server" DataIndex="NOMBRE" Text="Nombre" Flex="1" />
+                            <ext:Column ID="Column6" runat="server" DataIndex="APELLIDO" Text="Apellido" Flex="1" />
+                            <ext:Column ID="Column2" runat="server" DataIndex="SEXO" Text="Sexo" Flex="1" />
+                            <ext:Column ID="Column7" runat="server" DataIndex="DIRECCION" Text="Direccion" Flex="1" />
+                            <ext:Column ID="Column9" runat="server" DataIndex="FECHA_NACIMIENTO" Text="Fecha Nac." Flex="1" />
+                            <ext:Column ID="Column10" runat="server" DataIndex="TELEFONO1" Text="Telefono" Flex="1" />
+                            <ext:Column ID="Column11" runat="server" DataIndex="TELEFONO2" Text="Celular" Flex="1" />
+                            <ext:Column ID="Column12" runat="server" DataIndex="EMAIL" Text="Email" Flex="1" />
                             <ext:Column ID="Column8" runat="server" DataIndex="ESTADO" Text="Estado" Flex="1" />
-                            <ext:CommandColumn runat="server" Width="30">
+                            <ext:CommandColumn runat="server" Width="30" Text="">
                                 <Commands>
-                                    <ext:GridCommand Icon="Pencil" CommandName="btnEditar" ToolTip-Text="Editar Producto" />
+                                    <ext:GridCommand Icon="Pencil" CommandName="btnEditar" ToolTip-Text="Editar" />
                                 </Commands>
                                 <Listeners>
-                                    <Command Handler="App.direct.fcrearVentanaDonante(2, record.data.ID_DONANTE, record.data.ID_FACTOR, record.data.DPI, record.data.NOMBRE, record.data.APELLIDO, record.data.SEXO, record.data.DIRECCION, record.data.FECHA_NACIMIENTO, record.data.TELEFONO1, record.data.TELEFONO2, record.data.EMAIL, record.data.ESTADO);" />
+                                    <Command Handler="App.direct.fcrearVentanaDonante( record.data.ID_DONANTE, record.data.ID_FACTOR, record.data.DPI, record.data.NOMBRE, record.data.APELLIDO, record.data.SEXO, record.data.DIRECCION, record.data.FECHA_NACIMIENTO, record.data.TELEFONO1, record.data.TELEFONO2, record.data.EMAIL, record.data.ESTADO);" />
                                 </Listeners>
                             </ext:CommandColumn>
                         </Columns>

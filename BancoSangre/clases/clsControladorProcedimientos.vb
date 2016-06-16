@@ -150,7 +150,7 @@ Public Class clsControladorProcedimientos
                 .Parameters.Add("V_TELEFONO1", OracleDbType.Varchar2).Value = p_telefono1
                 .Parameters.Add("V_TELEFONO2", OracleDbType.Varchar2).Value = p_telefono2
                 .Parameters.Add("V_EMAIL", OracleDbType.Varchar2).Value = p_email
-                .Parameters.Add("V_ESTADO", OracleDbType.Int32).Value = p_estado
+                .Parameters.Add("V_ESTADO", OracleDbType.Varchar2).Value = p_estado
 
 
             End With
@@ -940,7 +940,7 @@ Public Class clsControladorProcedimientos
                 .CommandText = "select d.id_donante, d.id_factor, f.descripcion as FACTOR, d.dpi, d.nombre, 
                                         d.apellido, d.sexo, d.direccion, d.fecha_nacimiento, d.telefono1, d.telefono2,
                                         d.email, d.estado 
-                                from DONANTE d inner join GRUPO_SANGUINEO as f on f.id_factor = d.id_factor"
+                                from DONANTE d inner join GRUPO_SANGUINEO f on f.id_factor = d.id_factor"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception

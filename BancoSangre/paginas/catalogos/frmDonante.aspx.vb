@@ -26,28 +26,29 @@ Public Class frmDonante
                                       ByVal p_tel2 As String, ByVal p_mail As String, ByVal p_estado As String)
         Dim titulo As String = ""
         Dim queryString As String = ""
-        Select Case p_id
-            Case clsComunes.Operacion_Registro.Nuevo
-                titulo = "Crear nuevo Donante"
-                queryString = ""
-                queryString &= ("&id=" & p_id)
-            Case clsComunes.Operacion_Registro.Editar
+        If p_id = clsComunes.Operacion_Registro.Nuevo Then
 
-                titulo = "Modificar Producto " & p_nombre
-                queryString = ""
-                queryString &= ("&id=" & p_id)
-                queryString &= ("&idf=" & p_idfactor)
-                queryString &= ("&dpi=" & p_dpi)
-                queryString &= ("&nombre=" & p_nombre)
-                queryString &= ("&apellido=" & p_apellido)
-                queryString &= ("&sexo=" & p_sexo)
-                queryString &= ("&direccion=" & p_direccion)
-                queryString &= ("&fechan=" & p_fechan)
-                queryString &= ("&tel1=" & p_tel1)
-                queryString &= ("&tel2=" & p_tel2)
-                queryString &= ("&email=" & p_mail)
+            titulo = "Crear nuevo Donante"
+            queryString = ""
+            queryString &= ("&id=" & p_id)
+        Else
 
-        End Select
+            titulo = "Modificar Donante " & p_nombre
+            queryString = ""
+            queryString &= ("&id=" & p_id)
+            queryString &= ("&idf=" & p_idfactor)
+            queryString &= ("&dpi=" & p_dpi)
+            queryString &= ("&nombre=" & p_nombre)
+            queryString &= ("&apellido=" & p_apellido)
+            queryString &= ("&sexo=" & p_sexo)
+            queryString &= ("&direccion=" & p_direccion)
+            queryString &= ("&fechan=" & p_fechan)
+            queryString &= ("&tel1=" & p_tel1)
+            queryString &= ("&tel2=" & p_tel2)
+            queryString &= ("&email=" & p_mail)
+            queryString &= ("&estado=" & p_estado)
+
+        End If
         Dim win = New Window With {.ID = "Win_EditarDonante",
                                     .Width = Unit.Pixel(700),
                                     .Height = Unit.Pixel(600),
@@ -57,7 +58,7 @@ Public Class frmDonante
                                     .Collapsible = False,
                                     .Maximizable = False}
         win.Loader = New ComponentLoader
-        win.Loader.Url = "frmEditarDonante.aspx?" & queryString
+        win.Loader.Url = "frmItemDonante.aspx?" & queryString
         win.Loader.Mode = LoadMode.Frame
         win.Loader.LoadMask.ShowMask = True
         win.Loader.LoadMask.Msg = "Espere un momento..."
