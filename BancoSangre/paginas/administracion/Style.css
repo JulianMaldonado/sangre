@@ -16,7 +16,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; 
+  vertical-align: baseline;
 }
 
 article, aside, details, figcaption, figure,
@@ -98,6 +98,13 @@ table {
   margin: 0 -1px;
 }
 
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
 body {
   font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
   color: #404040;
@@ -249,7 +256,7 @@ input[type=submit] {
   background: #cde5ef;
   border: 1px solid;
   border-color: #b4ccce #b3c0c8 #9eb9c2;
-  border-radius: 2px;
+  border-radius: 16px;
   outline: 0;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
