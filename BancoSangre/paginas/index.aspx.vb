@@ -21,29 +21,63 @@ Public Class index
         mostrarMenu()
     End Sub
     Private Sub ocultarMenu()
+
         miGruposanguineo.Visible = False
         miAlmacen.Visible = False
         miDonante.Visible = False
         miEmpleado.Visible = False
+        miMuesta.Visible = False
+        miVenta.Visible = False
+        miDonacion.Visible = False
+        miInventario.Visible = False
+        mpReporteria.Visible = False
 
     End Sub
     Protected Sub mostrarMenu()
 
-        Select Case CInt(Session("idpuesto"))
-                    Case 1
+        Select Case CInt(Session("id_nivel"))
+            Case 1   ''administrador
+
+                miGruposanguineo.Visible = True
+                miAlmacen.Visible = True
+                miDonante.Visible = True
+                miEmpleado.Visible = True
+                miMuesta.Visible = True
+                miVenta.Visible = True
+                miDonacion.Visible = True
+                miInventario.Visible = True
+                mpReporteria.Visible = True
 
 
-                    Case 2
+            Case 2  ''secretario
+
+                miGruposanguineo.Visible = True
+                miAlmacen.Visible = True
+                miDonante.Visible = True
+                miEmpleado.Visible = True
+                miMuesta.Visible = True
+                miVenta.Visible = True
+                miDonacion.Visible = True
+                miInventario.Visible = True
+                mpReporteria.Visible = False
+
+
+            Case 3  ''vendedor
+
+                miGruposanguineo.Visible = False
+                miAlmacen.Visible = False
+                miDonante.Visible = False
+                miEmpleado.Visible = False
+                miMuesta.Visible = True
+                miVenta.Visible = True
+                miDonacion.Visible = True
+                miInventario.Visible = True
+                mpReporteria.Visible = False
 
 
 
-                    Case 3
 
-
-
-
-
-                End Select
+        End Select
 
 
 

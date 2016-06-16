@@ -257,20 +257,11 @@ Partial Public Class index
     Protected WithEvents miInventario As Global.Ext.Net.MenuItem
     
     '''<summary>
-    '''Control mireporteria.
+    '''Control mpReporteria.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mireporteria As Global.Ext.Net.MenuPanel
-    
-    '''<summary>
-    '''Control miVentas.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents miVentas As Global.Ext.Net.MenuItem
+    Protected WithEvents mpReporteria As Global.Ext.Net.MenuPanel
 End Class

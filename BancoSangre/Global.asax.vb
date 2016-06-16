@@ -13,6 +13,7 @@ Public Class Global_asax
             Session.Add("fecha_nacimiento", 0)
             Session.Add("fecha_alta", 0)
             Session.Add("usuario", 0)
+            Session.Add("id_nivel", 0)
         Catch ex As Exception
 
         End Try
