@@ -666,14 +666,14 @@ Public Class clsControladorProcedimientos
                 .CommandText = "SPACTUALIZAGRUPOSANGUINEO"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("V_ID_FACTOR", OracleDbType.Int16).Value = p_id_factor
-                .Parameters.Add("V_DESCRIPCION", OracleDbType.Int16).Value = p_descripcion
+                .Parameters.Add("V_DESCRIPCION", OracleDbType.Varchar2).Value = p_descripcion
 
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -921,6 +921,26 @@ Public Class clsControladorProcedimientos
                 .Connection = bd.ObtenerConexion
                 .CommandType = CommandType.Text
                 .CommandText = "select id_factor, descripcion from GRUPO_SANGUINEO"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+    Public Function fListarDonantes() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandType = CommandType.Text
+                .CommandText = "select d.id_donante, d.id_factor, f.descripcion as FACTOR, d.dpi, d.nombre, 
+                                        d.apellido, d.sexo, d.direccion, d.fecha_nacimiento, d.telefono1, d.telefono2,
+                                        d.email, d.estado 
+                                from DONANTE d inner join GRUPO_SANGUINEO as f on f.id_factor = d.id_factor"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception

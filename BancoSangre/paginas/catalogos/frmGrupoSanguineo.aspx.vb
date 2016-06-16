@@ -5,7 +5,7 @@ Public Class frmGrupoSanguineo
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim cls As New clsComunes
-        If CInt(Session("idpuesto")) > 6 Then
+        If CInt(Session("id_nivel")) > 1 Then
             Response.Redirect(cls.Pagina_Acceso_Denegado)
 
         End If
@@ -26,9 +26,9 @@ Public Class frmGrupoSanguineo
         Dim r As Integer
         Try
             Dim acceso As New clsControladorProcedimientos
-            If txtFamilia.Text <> "" Then
-                If acceso.fInsertarGrupoSanguineo(txtFamilia.Text) = clsComunes.Respuesta_Operacion.Guardado Then
-                    txtFamilia.Text = ""
+            If txtGrupoSanguineo.Text <> "" Then
+                If acceso.fInsertarGrupoSanguineo(txtGrupoSanguineo.Text) = clsComunes.Respuesta_Operacion.Guardado Then
+                    txtGrupoSanguineo.Text = ""
                     r = clsComunes.Respuesta_Operacion.Guardado
                 End If
             End If

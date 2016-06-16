@@ -23,13 +23,13 @@ Partial Public Class frmGrupoSanguineo
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
-    '''Control vpCatalogoFamilia.
+    '''Control vpCatalogoGrupoSanguineo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents vpCatalogoFamilia As Global.Ext.Net.Viewport
+    Protected WithEvents vpCatalogoGrupoSanguineo As Global.Ext.Net.Viewport
     
     '''<summary>
     '''Control dg.
@@ -77,22 +77,22 @@ Partial Public Class frmGrupoSanguineo
     Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
     
     '''<summary>
-    '''Control txtFamilia.
+    '''Control txtGrupoSanguineo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtFamilia As Global.Ext.Net.TextField
+    Protected WithEvents txtGrupoSanguineo As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control btnGuardarFamilia.
+    '''Control btnGuardarGrupoSanguineo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnGuardarFamilia As Global.Ext.Net.Button
+    Protected WithEvents btnGuardarGrupoSanguineo As Global.Ext.Net.Button
     
     '''<summary>
     '''Control rowSelectionModel1.
