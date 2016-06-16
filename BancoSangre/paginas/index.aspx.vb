@@ -22,143 +22,28 @@ Public Class index
     End Sub
     Private Sub ocultarMenu()
         miGruposanguineo.Visible = False
-        miProveedores.Visible = False
-        miFamilia.Visible = False
-        miMaterial.Visible = False
-        miModelo.Visible = False
-        miEnvios.Visible = False
-        MiRecepcionEnvio.Visible = False
-        MiInventario.Visible = False
-        miVentas.Visible = False
-        miParametros.Visible = False
-        miPeriodoConta.Visible = False
-        miTipoCuenta.Visible = False
-        miCatalogoCuenta.Visible = False
-        miAsientoCOntable.Visible = False
-        miLibroDiario.Visible = False
-        miTickets.Visible = False
-        miAsignacion.Visible = False
-        miUsuarios.Visible = False
-        MiIngresoFActura.Visible = False
+        miAlmacen.Visible = False
+        miDonante.Visible = False
+        miEmpleado.Visible = False
+
     End Sub
     Protected Sub mostrarMenu()
-        Select Case CInt(Session("idtipolugar"))
-            Case 1 'tipo adminsitracion
-                Select Case CInt(Session("idpuesto"))
+
+        Select Case CInt(Session("idpuesto"))
                     Case 1
-                        miFamilia.Visible = True
-                        miMaterial.Visible = True
-                        miProveedores.Visible = True
-                        MiInventario.Visible = True
-                        miModelo.Visible = True
-                        miPeriodoConta.Visible = True
-                        miLibroDiario.Visible = True
-                        miAsientoCOntable.Visible = True
-                        miAsignacion.Visible = True
+
 
                     Case 2
-                        miFamilia.Visible = True
-                        miProveedores.Visible = True
-                        MiInventario.Visible = True
-                        miModelo.Visible = True
-                        miPeriodoConta.Visible = True
-                        miLibroDiario.Visible = True
-                        miAsientoCOntable.Visible = True
+
 
 
                     Case 3
 
-                        miParametros.Visible = True
-                        miPeriodoConta.Visible = True
-                        miTipoCuenta.Visible = True
-                        miCatalogoCuenta.Visible = True
-                        miAsientoCOntable.Visible = True
-                        miLibroDiario.Visible = True
-
-                    Case 4
-                        miGruposanguineo.Visible = True
-                        miProveedores.Visible = True
-                        miFamilia.Visible = True
-                        miMaterial.Visible = True
-                        miModelo.Visible = True
-                        miEnvios.Visible = True
-                        MiRecepcionEnvio.Visible = True
-                        MiInventario.Visible = True
-                        miVentas.Visible = True
-                        miParametros.Visible = True
-                        miPeriodoConta.Visible = True
-                        miTipoCuenta.Visible = True
-                        miCatalogoCuenta.Visible = True
-                        miAsientoCOntable.Visible = True
-                        miLibroDiario.Visible = True
-                        miTickets.Visible = True
-                        miAsignacion.Visible = True
-                        miUsuarios.Visible = True
-                        MiIngresoFActura.Visible = True
-
-                End Select
-            Case 2 'tipo bodega
-
-                Select Case CInt(Session("idpuesto"))
-                    Case 5
-                        miProveedores.Visible = True
-                        miFamilia.Visible = True
-                        miMaterial.Visible = True
-                        miModelo.Visible = True
-                        miEnvios.Visible = True
-                        MiRecepcionEnvio.Visible = True
-                        MiInventario.Visible = True
-                        MiIngresoFActura.Visible = True
-
-                    Case 6
-                        miProveedores.Visible = True
-                        miFamilia.Visible = True
-                        miMaterial.Visible = True
-                        miModelo.Visible = True
-                        miEnvios.Visible = True
-                        MiRecepcionEnvio.Visible = True
-                        MiInventario.Visible = True
-                        MiIngresoFActura.Visible = True
-                End Select
-            Case 3 'tipo tienda
-
-                Select Case CInt(Session("idpuesto"))
-                    Case 7
-                        miFamilia.Visible = True
-                        miMaterial.Visible = True
-                        miModelo.Visible = True
-                        miVentas.Visible = True
 
 
-                    Case 8
-                        miFamilia.Visible = True
-                        miMaterial.Visible = True
-                        miModelo.Visible = True
-
-
-                    Case 9
-
-                        miTickets.Visible = True
-
-
-                    Case 10
-                        miVentas.Visible = True
-                        miEnvios.Visible = True
-                        MiInventario.Visible = True
-                        miFamilia.Visible = True
-                        miMaterial.Visible = True
-                        miModelo.Visible = True
 
 
                 End Select
-            Case 4 'publico
-                Select Case CInt(Session("idpuesto"))
-                    Case 11
-                        miTickets.Visible = True
-                End Select
-
-
-        End Select
 
 
 

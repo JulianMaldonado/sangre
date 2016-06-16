@@ -155,12 +155,26 @@
     <Content Include="App_Readme\Transformer.NET\README.txt" />
     <Content Include="Ext.NET.Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="paginas\administracion\frmEditarEmpleados.aspx" />
+    <Content Include="paginas\administracion\frmEmpleados.aspx" />
+    <Content Include="paginas\administracion\frmLogin.aspx" />
+    <Content Include="paginas\administracion\frmReporteria.aspx" />
+    <Content Include="paginas\administracion\notificacion\frmDenegado.aspx" />
+    <Content Include="paginas\administracion\notificacion\frmErrorCodigo.aspx" />
+    <Content Include="paginas\administracion\Scripts\jsEmpleados.js" />
+    <Content Include="paginas\administracion\Style.css" />
+    <Content Include="paginas\catalogos\frmAlmacen.aspx" />
+    <Content Include="paginas\catalogos\frmDonante.aspx" />
+    <Content Include="paginas\catalogos\frmEmpleado.aspx" />
     <Content Include="paginas\catalogos\frmGrupoSanguineo.aspx" />
     <Content Include="paginas\catalogos\frmItemGrupoSanguineo.aspx" />
     <Content Include="paginas\error\error404.aspx" />
     <Content Include="paginas\index.aspx" />
     <Content Include="paginas\Inicio.aspx" />
     <Content Include="paginas\login.aspx" />
+    <Content Include="paginas\operaciones\frmDonacion.aspx" />
+    <Content Include="paginas\operaciones\frmMuestra.aspx" />
+    <Content Include="paginas\operaciones\frmVenta.aspx" />
     <Content Include="paginas\Style.css" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
@@ -207,6 +221,69 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="paginas\administracion\frmEditarEmpleados.aspx.designer.vb">
+      <DependentUpon>frmEditarEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administracion\frmEditarEmpleados.aspx.vb">
+      <DependentUpon>frmEditarEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administracion\frmEmpleados.aspx.designer.vb">
+      <DependentUpon>frmEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administracion\frmEmpleados.aspx.vb">
+      <DependentUpon>frmEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administracion\frmLogin.aspx.designer.vb">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administracion\frmLogin.aspx.vb">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administracion\frmReporteria.aspx.designer.vb">
+      <DependentUpon>frmReporteria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administracion\frmReporteria.aspx.vb">
+      <DependentUpon>frmReporteria.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administracion\notificacion\frmDenegado.aspx.designer.vb">
+      <DependentUpon>frmDenegado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administracion\notificacion\frmDenegado.aspx.vb">
+      <DependentUpon>frmDenegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administracion\notificacion\frmErrorCodigo.aspx.designer.vb">
+      <DependentUpon>frmErrorCodigo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administracion\notificacion\frmErrorCodigo.aspx.vb">
+      <DependentUpon>frmErrorCodigo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmAlmacen.aspx.designer.vb">
+      <DependentUpon>frmAlmacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmAlmacen.aspx.vb">
+      <DependentUpon>frmAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmDonante.aspx.designer.vb">
+      <DependentUpon>frmDonante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmDonante.aspx.vb">
+      <DependentUpon>frmDonante.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmEmpleado.aspx.designer.vb">
+      <DependentUpon>frmEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmEmpleado.aspx.vb">
+      <DependentUpon>frmEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="paginas\catalogos\frmGrupoSanguineo.aspx.designer.vb">
       <DependentUpon>frmGrupoSanguineo.aspx</DependentUpon>
     </Compile>
@@ -247,6 +324,27 @@
     </Compile>
     <Compile Include="paginas\login.aspx.vb">
       <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmDonacion.aspx.designer.vb">
+      <DependentUpon>frmDonacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmDonacion.aspx.vb">
+      <DependentUpon>frmDonacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmMuestra.aspx.designer.vb">
+      <DependentUpon>frmMuestra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmMuestra.aspx.vb">
+      <DependentUpon>frmMuestra.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmVenta.aspx.designer.vb">
+      <DependentUpon>frmVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmVenta.aspx.vb">
+      <DependentUpon>frmVenta.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

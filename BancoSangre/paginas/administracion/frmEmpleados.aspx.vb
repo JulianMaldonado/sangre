@@ -16,7 +16,7 @@ Public Class frmEmpleados
     <DirectMethod> _
     Public Sub fLlenarGrid()
         Dim v_datos As New clsControladorProcedimientos
-        stCatalogoEmpleado.DataSource = v_datos.fListarEmpleados
+        '    stCatalogoEmpleado.DataSource = v_datos.fListarEmpleados
         stCatalogoEmpleado.DataBind()
     End Sub
     <DirectMethod> _

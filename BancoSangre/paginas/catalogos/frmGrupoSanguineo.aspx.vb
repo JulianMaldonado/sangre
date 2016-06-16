@@ -22,7 +22,7 @@ Public Class frmGrupoSanguineo
         End Try
     End Sub
     <DirectMethod>
-    Public Function fNuevaFamilia() As Integer
+    Public Function fNuevoGS() As Integer
         Dim r As Integer
         Try
             Dim acceso As New clsControladorProcedimientos
@@ -39,11 +39,11 @@ Public Class frmGrupoSanguineo
         Return r
     End Function
     <DirectMethod>
-    Public Function fModificarFamilia(ByVal id As Long, ByVal nombre As String) As String
+    Public Function fModificarGS(ByVal id As Long, ByVal nombre As String) As String
         Dim r As Integer
         Try
             Dim acceso As New clsControladorProcedimientos
-            If acceso.fActualizarFamilia(id, nombre) = clsComunes.Respuesta_Operacion.Modificado Then
+            If acceso.fActualizaGuproSanguineo(id, nombre) = clsComunes.Respuesta_Operacion.Modificado Then
                 r = clsComunes.Respuesta_Operacion.Modificado
                 fLlenarGrid()
             End If
