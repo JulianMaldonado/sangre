@@ -1024,7 +1024,8 @@ Public Class clsControladorProcedimientos
             With bd._Cmd
                 .Connection = bd.ObtenerConexion
                 .CommandType = CommandType.Text
-                .CommandText = "m.id_donante,
+                .CommandText = "Select  m.id_muestra,
+                                        m.id_donante,
                                            d.nombre as DONANTE,
                                         m.id_factor,
                                            f.descripcion as FACTOR, 
@@ -1039,6 +1040,26 @@ Public Class clsControladorProcedimientos
                                 from MUESTRA m inner join DONANTE d on d.id_donante = m.id_donante
                                                 inner join GRUPO_SANGUINEO f on f.id_factor = m.id_factor
                                                 inner join EMPLEADO e on e.id_empleado = m.id_empleado"
+
+
+
+                '"select  m.id_muestra,
+                '                        d.nombre as DONANTE,
+                '                        f.descripcion As FACTOR, 
+                '                        e.nombre as EMPLEADO,
+                '                        m.fecha,
+                '                        m.estado,
+                '                        m.fecha_fin,
+                '                        m.aprobado,
+                '                        m.pagado,
+                '                        m.costo 
+
+                '           From MUESTRA m inner Join DONANTE d on d.id_donante = m.id_donante
+                '                          inner Join GRUPO_SANGUINEO f on f.id_factor = m.id_factor
+                '                            inner Join EMPLEADO e On e.id_empleado = m.id_empleado"
+
+
+
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception
