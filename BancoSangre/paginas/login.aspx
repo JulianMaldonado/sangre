@@ -54,7 +54,7 @@
         <form id="form1" runat="server">
             <ext:ResourceManager runat="server"></ext:ResourceManager>
         <section class="container">
-            <img alt="" src="../../img/logo.jpg" height="128" class="logo" />
+            <img alt="" src="../../img/icono.png" height="128" class="logo" />
             <p></p>
             <div class="login">
                 <h1>Iniciar Sesion</h1>

@@ -18,7 +18,7 @@
         }
     </style>
      
-    <link rel="shortcut icon" type="image/ico" href="Images/favicon.png" />
+    <link rel="shortcut icon" type="image/ico" href="Images/icono.png" />
     <ext:ResourcePlaceHolder ID="ResourcePlaceHolder1" runat="server" Mode="ScriptFiles" />
 </head>
 <body>
@@ -35,7 +35,7 @@
                                 <ext:Panel ID="DisplayField12" runat="server">
                                     <Content>
                                         <div>
-                                            <asp:Image runat="server" ImageUrl="~/img/logo.png" ID="Image1" ImageAlign="AbsMiddle" />
+                                            <asp:Image runat="server" ImageUrl="~/img/logo.png" ID="Image1" ImageAlign="AbsMiddle" Height ="80px" />
                                         </div>
                                     </Content>
                                 </ext:Panel>
