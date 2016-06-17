@@ -230,7 +230,7 @@ Public Class clsControladorProcedimientos
         End Try
         Return v_respuesta
     End Function
-    Public Function fInsertarGrupoSanguineo(ByVal p_descripcion As String) As Integer
+    Public Function fInsertarNewAlmacen(ByVal p_descripcion As String) As Integer
 
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
@@ -331,7 +331,6 @@ Public Class clsControladorProcedimientos
         End Try
         Return v_respuesta
     End Function
-
     Public Function fInsertarMuestra(ByVal p_id_donante As Int32,
                                      ByVal p_id_factor As Int16,
                                      ByVal p_id_empleado As Int32,
@@ -426,9 +425,6 @@ Public Class clsControladorProcedimientos
                 .Parameters.Add("V_NIT", OracleDbType.Varchar2).Value = p_nit
                 .Parameters.Add("V_ESTADO", OracleDbType.Int32).Value = p_estado
                 .Parameters.Add("V_TOTAL", OracleDbType.Decimal).Value = p_total
-
-
-
 
             End With
             bd._Cmd.ExecuteNonQuery()
@@ -891,7 +887,6 @@ Public Class clsControladorProcedimientos
         End Try
         Return DT
     End Function
-
     Public Function fListarHistorialProducto(ByVal lugar As String, ByVal idpr_modelo As String) As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
@@ -910,8 +905,6 @@ Public Class clsControladorProcedimientos
         End Try
         Return dt
     End Function
-
-
     Public Function fListarGrupoSanguineo() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
@@ -951,7 +944,6 @@ Public Class clsControladorProcedimientos
         End Try
         Return dt
     End Function
-
     Public Function fListarHistorial() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
@@ -976,12 +968,6 @@ Public Class clsControladorProcedimientos
         End Try
         Return dt
     End Function
-
-
-
-
-
-
     Public Function fListarDonantes() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
@@ -1002,6 +988,95 @@ Public Class clsControladorProcedimientos
         End Try
         Return dt
     End Function
+    Public Function fListarEmpleado() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandType = CommandType.Text
+                .CommandText = "select  e.id_empleado, 
+                                        e.nombre, 
+                                        e.apellido, 
+                                        e.sexo, 
+                                        e.direccion,
+                                        e.telefono,        
+                                        e.fecha_nacimiento,
+                                        e.fecha_alta,
+                                        e.usuario,
+                                        e.pass, 
+                                        e.id_nivel 
+                                from EMPLEADO e "
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+    Public Function fListarMuestra() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandType = CommandType.Text
+                .CommandText = "m.id_donante,
+                                           d.nombre as DONANTE,
+                                        m.id_factor,
+                                           f.descripcion as FACTOR, 
+                                        m.id_empleado, 
+                                            e.nombre as EMPLEADO, 
+                                        m.fecha,
+                                        m.estado,        
+                                        m.fecha_fin,
+                                        m.aprobado,
+                                        m.pagado, 
+                                        m.costo 
+                                from MUESTRA m inner join DONANTE d on d.id_donante = m.id_donante
+                                                inner join GRUPO_SANGUINEO f on f.id_factor = m.id_factor
+                                                inner join EMPLEADO e on e.id_empleado = m.id_empleado"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+    Public Function fListarAlmacen() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandType = CommandType.Text
+                .CommandText = "select  a.id_almacen, 
+                                        a.nombre, 
+                                        a.direccion 
+                                 from ALMACEN a "
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+
+
+
+
+
+
+
+
+
+
 
 #End Region
 #Region "Obtener"

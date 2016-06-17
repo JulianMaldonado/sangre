@@ -11,8 +11,8 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmEmpleado
-
+Partial Public Class frmItemEmpleado
+    
     '''<summary>
     '''Control form1.
     '''</summary>
@@ -21,184 +21,130 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
+    
     '''<summary>
-    '''Control vpCatalogoEmpleado.
+    '''Control frmeditarempleado.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents vpCatalogoEmpleado As Global.Ext.Net.Viewport
-
+    Protected WithEvents frmeditarempleado As Global.Ext.Net.FormPanel
+    
     '''<summary>
-    '''Control dg.
+    '''Control txtCodigo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dg As Global.Ext.Net.GridPanel
-
+    Protected WithEvents txtCodigo As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control stEMPLEADO.
+    '''Control txtNombre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stEMPLEADO As Global.Ext.Net.Store
-
+    Protected WithEvents txtNombre As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control mdEMPLEADO.
+    '''Control txtApellido.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mdEMPLEADO As Global.Ext.Net.Model
-
+    Protected WithEvents txtApellido As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control Toolbar1.
+    '''Control txtSexo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Toolbar1 As Global.Ext.Net.Toolbar
-
+    Protected WithEvents txtSexo As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control ToolbarFill2.
+    '''Control txtDireccion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
-
+    Protected WithEvents txtDireccion As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control btnNuevoEmpleado.
+    '''Control txtTelefono.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnNuevoEmpleado As Global.Ext.Net.Button
-
+    Protected WithEvents txtTelefono As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control rowSelectionModel1.
+    '''Control txtFechan.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rowSelectionModel1 As Global.Ext.Net.RowSelectionModel
-
+    Protected WithEvents txtFechan As Global.Ext.Net.DateField
+    
     '''<summary>
-    '''Control Column1.
+    '''Control txtFechaAlta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Column1 As Global.Ext.Net.Column
-
+    Protected WithEvents txtFechaAlta As Global.Ext.Net.DateField
+    
     '''<summary>
-    '''Control Column2.
+    '''Control txtUser.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Column2 As Global.Ext.Net.Column
-
+    Protected WithEvents txtUser As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control Column3.
+    '''Control txtPass.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Column3 As Global.Ext.Net.Column
-
+    Protected WithEvents txtPass As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control Column4.
+    '''Control txtnivel.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Column4 As Global.Ext.Net.Column
-
+    Protected WithEvents txtnivel As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control Column5.
+    '''Control btnGuardar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Column5 As Global.Ext.Net.Column
-
+    Protected WithEvents btnGuardar As Global.Ext.Net.Button
+    
     '''<summary>
-    '''Control Column6.
+    '''Control btnCancelar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Column6 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control Column7.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column7 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control Column8.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column8 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control Column9.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column9 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control Column10.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column10 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control Column11.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column11 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control PagingToolbar1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
+    Protected WithEvents btnCancelar As Global.Ext.Net.Button
 End Class

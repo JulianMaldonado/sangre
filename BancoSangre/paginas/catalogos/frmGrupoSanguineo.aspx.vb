@@ -27,7 +27,7 @@ Public Class frmGrupoSanguineo
         Try
             Dim acceso As New clsControladorProcedimientos
             If txtGrupoSanguineo.Text <> "" Then
-                If acceso.fInsertarGrupoSanguineo(txtGrupoSanguineo.Text) = clsComunes.Respuesta_Operacion.Guardado Then
+                If acceso.fInsertarNewAlmacen(txtGrupoSanguineo.Text) = clsComunes.Respuesta_Operacion.Guardado Then
                     txtGrupoSanguineo.Text = ""
                     r = clsComunes.Respuesta_Operacion.Guardado
                 End If
