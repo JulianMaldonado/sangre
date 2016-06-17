@@ -11,8 +11,8 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmEmpleado
-
+Partial Public Class frmHistorial
+    
     '''<summary>
     '''Control form1.
     '''</summary>
@@ -21,16 +21,16 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
+    
     '''<summary>
-    '''Control vpCatalogoEmpleado.
+    '''Control vpCatalogoGrupoSanguineo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents vpCatalogoEmpleado As Global.Ext.Net.Viewport
-
+    Protected WithEvents vpCatalogoGrupoSanguineo As Global.Ext.Net.Viewport
+    
     '''<summary>
     '''Control dg.
     '''</summary>
@@ -39,25 +39,25 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents dg As Global.Ext.Net.GridPanel
-
+    
     '''<summary>
-    '''Control stEMPLEADO.
+    '''Control sthistorial.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stEMPLEADO As Global.Ext.Net.Store
-
+    Protected WithEvents sthistorial As Global.Ext.Net.Store
+    
     '''<summary>
-    '''Control mdEMPLEADO.
+    '''Control ModeloGrupoSanguineo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mdEMPLEADO As Global.Ext.Net.Model
-
+    Protected WithEvents ModeloGrupoSanguineo As Global.Ext.Net.Model
+    
     '''<summary>
     '''Control Toolbar1.
     '''</summary>
@@ -66,7 +66,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Toolbar1 As Global.Ext.Net.Toolbar
-
+    
     '''<summary>
     '''Control ToolbarFill2.
     '''</summary>
@@ -75,16 +75,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
-
-    '''<summary>
-    '''Control btnNuevoEmpleado.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnNuevoEmpleado As Global.Ext.Net.Button
-
+    
     '''<summary>
     '''Control rowSelectionModel1.
     '''</summary>
@@ -93,7 +84,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents rowSelectionModel1 As Global.Ext.Net.RowSelectionModel
-
+    
     '''<summary>
     '''Control Column1.
     '''</summary>
@@ -102,7 +93,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column1 As Global.Ext.Net.Column
-
+    
     '''<summary>
     '''Control Column2.
     '''</summary>
@@ -111,7 +102,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column2 As Global.Ext.Net.Column
-
+    
     '''<summary>
     '''Control Column3.
     '''</summary>
@@ -120,7 +111,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column3 As Global.Ext.Net.Column
-
+    
     '''<summary>
     '''Control Column4.
     '''</summary>
@@ -129,7 +120,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column4 As Global.Ext.Net.Column
-
+    
     '''<summary>
     '''Control Column5.
     '''</summary>
@@ -138,7 +129,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column5 As Global.Ext.Net.Column
-
+    
     '''<summary>
     '''Control Column6.
     '''</summary>
@@ -147,7 +138,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column6 As Global.Ext.Net.Column
-
+    
     '''<summary>
     '''Control Column7.
     '''</summary>
@@ -156,43 +147,7 @@ Partial Public Class frmEmpleado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column7 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control Column8.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column8 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control Column9.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column9 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control Column10.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column10 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control Column11.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column11 As Global.Ext.Net.Column
-
+    
     '''<summary>
     '''Control PagingToolbar1.
     '''</summary>

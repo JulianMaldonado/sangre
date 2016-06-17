@@ -168,12 +168,15 @@
     <Content Include="paginas\catalogos\frmEmpleado.aspx" />
     <Content Include="paginas\catalogos\frmGrupoSanguineo.aspx" />
     <Content Include="paginas\catalogos\frmItemDonante.aspx" />
+    <Content Include="paginas\catalogos\frmItemEmpleado.aspx" />
     <Content Include="paginas\catalogos\frmItemGrupoSanguineo.aspx" />
     <Content Include="paginas\error\error404.aspx" />
     <Content Include="paginas\index.aspx" />
     <Content Include="paginas\Inicio.aspx" />
     <Content Include="paginas\login.aspx" />
     <Content Include="paginas\operaciones\frmDonacion.aspx" />
+    <Content Include="paginas\operaciones\frmHistorial.aspx" />
+    <Content Include="paginas\operaciones\frmInventario.aspx" />
     <Content Include="paginas\operaciones\frmMuestra.aspx" />
     <Content Include="paginas\operaciones\frmVenta.aspx" />
     <Content Include="paginas\Style.css" />
@@ -299,6 +302,13 @@
       <DependentUpon>frmItemDonante.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="paginas\catalogos\frmItemEmpleado.aspx.designer.vb">
+      <DependentUpon>frmItemEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\catalogos\frmItemEmpleado.aspx.vb">
+      <DependentUpon>frmItemEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="paginas\catalogos\frmItemGrupoSanguineo.aspx.designer.vb">
       <DependentUpon>frmItemGrupoSanguineo.aspx</DependentUpon>
     </Compile>
@@ -339,6 +349,20 @@
     </Compile>
     <Compile Include="paginas\operaciones\frmDonacion.aspx.vb">
       <DependentUpon>frmDonacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmHistorial.aspx.designer.vb">
+      <DependentUpon>frmHistorial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmHistorial.aspx.vb">
+      <DependentUpon>frmHistorial.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmInventario.aspx.designer.vb">
+      <DependentUpon>frmInventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmInventario.aspx.vb">
+      <DependentUpon>frmInventario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="paginas\operaciones\frmMuestra.aspx.designer.vb">
