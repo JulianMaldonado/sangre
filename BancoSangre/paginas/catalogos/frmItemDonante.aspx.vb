@@ -30,11 +30,7 @@ Public Class frmItemDonante
         End If
     End Sub
     Private Sub fobtenerValoresQuerystring()
-
-
-
-
-        If Request.QueryString.AllKeys.Contains("id") Then
+                If Request.QueryString.AllKeys.Contains("id") Then
             _id = Long.Parse(Request.QueryString("id").ToString)
         End If
         If Request.QueryString.AllKeys.Contains("idf") Then

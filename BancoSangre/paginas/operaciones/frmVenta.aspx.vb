@@ -29,22 +29,22 @@ Public Class frmVenta
     End Sub
     <DirectMethod>
     Public Function fGuardar() As Integer
-        Dim retorno As Integer
-        Dim acceso As New clsControladorProcedimientos
-        Try
-            If clsComunes.Respuesta_Operacion.Guardado = acceso.fInsertarDetDonacion() Then
-                retorno = clsComunes.Respuesta_Operacion.Guardado
-                txtCant.Value = 0
-                txtDireccion.Text = ""
-                txtNit.Text = ""
-                txtNombre.Text = 0
-                Ext.Net.X.MessageBox.Alert("Operacion", "Transaccion Realizada").Show()
-            End If
-        Catch ex As Exception
-            retorno = clsComunes.Respuesta_Operacion.Erronea
-            Ext.Net.X.MessageBox.Notify("Operacion", ex.Message).Show()
-        End Try
-        Return retorno
+        'Dim retorno As Integer
+        'Dim acceso As New clsControladorProcedimientos
+        'Try
+        '    If clsComunes.Respuesta_Operacion.Guardado = acceso.fInsertarDetDonacion() Then
+        '        retorno = clsComunes.Respuesta_Operacion.Guardado
+        '        txtCant.Value = 0
+        '        txtDireccion.Text = ""
+        '        txtNit.Text = ""
+        '        txtNombre.Text = 0
+        '        Ext.Net.X.MessageBox.Alert("Operacion", "Transaccion Realizada").Show()
+        '    End If
+        'Catch ex As Exception
+        '    retorno = clsComunes.Respuesta_Operacion.Erronea
+        '    Ext.Net.X.MessageBox.Notify("Operacion", ex.Message).Show()
+        'End Try
+        'Return retorno
     End Function
     <DirectMethod>
     Public Sub BuscarInventario(ByVal p_modelo As String, ByVal p_famila As String, ByVal p_material As String, ByVal producto As String)
@@ -110,15 +110,15 @@ Public Class frmVenta
     End Sub
     <DirectMethod>
     Public Function fInsertar() As Integer
-        Dim acceso As New clsDetallesTemporales
-        Try
-            acceso.fInsertar("ventas", Session("idempleado"), txtModelo.Text, CDbl(txtCant.Value) )
-            Ext.Net.X.MessageBox.Notify("Operacion", "Producto Insertado").Show()
-            fQuitar()
-        Catch ex As Exception
-            Ext.Net.X.MessageBox.Notify("Error", ex.Message).Show()
-        End Try
-        Return 1
+        'Dim acceso As New clsDetallesTemporales
+        'Try
+        '    acceso.fInsertar("ventas", Session("idempleado"), txtModelo.Text, CDbl(txtCant.Value) )
+        '    Ext.Net.X.MessageBox.Notify("Operacion", "Producto Insertado").Show()
+        '    fQuitar()
+        'Catch ex As Exception
+        '    Ext.Net.X.MessageBox.Notify("Error", ex.Message).Show()
+        'End Try
+        'Return 1
     End Function
     <DirectMethod>
     Public Function fEliminar(ByVal modelo As String) As Integer
