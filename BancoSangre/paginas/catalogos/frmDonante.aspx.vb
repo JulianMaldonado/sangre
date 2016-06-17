@@ -50,8 +50,8 @@ Public Class frmDonante
 
         End If
         Dim win = New Window With {.ID = "Win_EditarDonante",
-                                    .Width = Unit.Pixel(700),
-                                    .Height = Unit.Pixel(600),
+                                    .Width = Unit.Pixel(750),
+                                    .Height = Unit.Pixel(700),
                                     .Title = titulo,
                                     .Modal = True,
                                     .AutoRender = False,
