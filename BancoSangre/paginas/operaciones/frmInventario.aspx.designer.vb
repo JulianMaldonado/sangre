@@ -113,6 +113,15 @@ Partial Public Class frmInventario
     Protected WithEvents Column3 As Global.Ext.Net.Column
     
     '''<summary>
+    '''Control ColumnaAccion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ColumnaAccion As Global.Ext.Net.CommandColumn
+    
+    '''<summary>
     '''Control PagingToolbar1.
     '''</summary>
     '''<remarks>

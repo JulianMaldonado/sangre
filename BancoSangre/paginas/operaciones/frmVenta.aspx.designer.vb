@@ -158,13 +158,22 @@ Partial Public Class frmVenta
     Protected WithEvents btnX As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control txtModelo.
+    '''Control txtIdFactor.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtModelo As Global.Ext.Net.TextField
+    Protected WithEvents txtIdFactor As Global.Ext.Net.TextField
+    
+    '''<summary>
+    '''Control txtFactor.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtFactor As Global.Ext.Net.TextField
     
     '''<summary>
     '''Control btnBuscar1.
