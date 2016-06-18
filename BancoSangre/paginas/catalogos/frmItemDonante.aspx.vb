@@ -67,6 +67,8 @@ Public Class frmItemDonante
             _estado = (Request.QueryString("estado").ToString)
         End If
 
+
+
     End Sub
     Private Sub fEstablecerValoresIniciales()
         fllenarGS()

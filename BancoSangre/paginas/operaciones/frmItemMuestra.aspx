@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmItemDonante.aspx.vb" Inherits="BancoSangre.frmItemDonante" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmItemMuestra.aspx.vb" Inherits="BancoSangre.frmItemMuestra" %>
 
 <!DOCTYPE html>
 
@@ -6,11 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <script type="text/javascript">
+<script type="text/javascript">
         fGuardar = function () {
             App.direct.fGuardar(
                 {
-                    success: function (result) {
+                    success: function (result) { 
                         if (result == 1) {
                             msgBox_A('EXITOSO!!!', 'El Registro fue Guardado!');
                         } else if (result == 2) {
@@ -47,15 +47,16 @@ msgBox_B = function (titulo, texto) {
 
 fCerrarVentanaModelo = function () {
     parent.App.direct.fLlenarGrid();
-    parent.App.Win_EditarDonante.close();
+    parent.App.Win_EditarMuestra.close();
 
 };
     </script>
-</head> 
-<body>
+</head>
+<%--<body>--%>
+
     <form id="form1" runat="server">
            <ext:ResourceManager runat="server" />
-        <ext:FormPanel ID="frmeditarmodelo" runat="server">
+        <ext:FormPanel ID="frmeditarMuestra" runat="server">
             <FieldDefaults AllowBlank="false" />
             <Items>
                 <ext:TextField ID="txtCodigo" FieldLabel="Codigo" runat="server" LabelAlign="Top" Flex="1"/>
@@ -79,6 +80,30 @@ fCerrarVentanaModelo = function () {
                             </Store>
                         </ext:ComboBox>
                                
+
+
+
+                         <ext:ComboBox runat="server" ID="ComboBox1" MarginSpec="5 5 5 5" FieldLabel="Seleccione un Factor" DisplayField="DESCRIPCION" ValueField="ID_FACTOR" LabelAlign="Top" Editable="false" Flex="1">
+                            <Store>
+                                <ext:Store ID="Store1" runat="server">
+                                    <Model>
+                                        <ext:Model ID="Model1" runat="server">
+                                            <Fields>
+                                                <ext:ModelField Name="ID_FACTOR" />
+                                                <ext:ModelField Name="DESCRIPCION" />
+                                            </Fields>
+                                        </ext:Model>
+                                    </Model>
+                                </ext:Store>
+                            </Store>
+                        </ext:ComboBox>
+
+
+
+
+
+
+
                     </Items>
                 </ext:FieldContainer>
 

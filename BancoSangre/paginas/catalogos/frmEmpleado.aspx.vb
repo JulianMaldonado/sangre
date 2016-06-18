@@ -2,7 +2,6 @@
 
 Public Class frmEmpleado
     Inherits System.Web.UI.Page
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim cls As New clsComunes
         If CInt(Session("id_nivel")) > 1 Then
@@ -48,9 +47,9 @@ Public Class frmEmpleado
             queryString &= ("&apellido=" & p_apellido)
             queryString &= ("&sexo=" & p_sexo)
             queryString &= ("&direccion=" & p_direccion)
-            queryString &= ("&tel1=" & p_tel)
+            queryString &= ("&tel=" & p_tel)
             queryString &= ("&fechan=" & p_fechan)
-            queryString &= ("&fechan=" & p_fechaalta)
+            queryString &= ("&fechaalta=" & p_fechaalta)
             queryString &= ("&user=" & p_usuario)
             queryString &= ("&pass=" & p_pass)
             queryString &= ("&nivel=" & p_id_nivel)

@@ -177,6 +177,7 @@
     <Content Include="paginas\operaciones\frmDonacion.aspx" />
     <Content Include="paginas\operaciones\frmHistorial.aspx" />
     <Content Include="paginas\operaciones\frmInventario.aspx" />
+    <Content Include="paginas\operaciones\frmItemMuestra.aspx" />
     <Content Include="paginas\operaciones\frmMuestra.aspx" />
     <Content Include="paginas\operaciones\frmVenta.aspx" />
     <Content Include="paginas\Style.css" />
@@ -363,6 +364,13 @@
     </Compile>
     <Compile Include="paginas\operaciones\frmInventario.aspx.vb">
       <DependentUpon>frmInventario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmItemMuestra.aspx.designer.vb">
+      <DependentUpon>frmItemMuestra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operaciones\frmItemMuestra.aspx.vb">
+      <DependentUpon>frmItemMuestra.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="paginas\operaciones\frmMuestra.aspx.designer.vb">

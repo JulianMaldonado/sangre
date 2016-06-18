@@ -110,9 +110,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -180,9 +180,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -198,7 +198,8 @@ Public Class clsControladorProcedimientos
                                        ByVal p_fecha_nacimiento As Date,
                                        ByVal p_fecha_alta As Date,
                                        ByVal p_usuario As String,
-                                       ByVal p_pass As String) As Integer
+                                       ByVal p_pass As String,
+                                       ByVal p_id_nivel As String) As Integer
 
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
@@ -217,6 +218,7 @@ Public Class clsControladorProcedimientos
                 .Parameters.Add("V_FECHA_ALTA", OracleDbType.Date).Value = p_fecha_alta
                 .Parameters.Add("V_USUARIO", OracleDbType.Varchar2).Value = p_usuario
                 .Parameters.Add("V_PASS", OracleDbType.Varchar2).Value = p_pass
+                .Parameters.Add("V_ID_NIVEL", OracleDbType.Varchar2).Value = p_id_nivel
 
 
             End With
@@ -244,7 +246,7 @@ Public Class clsControladorProcedimientos
 
 
 
-                '   .Parameters.Add("", varchar22, 32000, "").Direction = ParameterDirection.Output
+
             End With
             bd._Cmd.ExecuteNonQuery()
 
@@ -286,9 +288,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -321,9 +323,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -364,9 +366,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -428,9 +430,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -460,9 +462,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -494,9 +496,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -529,9 +531,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -576,9 +578,8 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -601,9 +602,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -620,13 +621,14 @@ Public Class clsControladorProcedimientos
                                        ByVal p_fecha_nacimiento As Date,
                                        ByVal p_fecha_alta As Date,
                                        ByVal p_usuario As String,
-                                       ByVal p_pass As String) As Integer
+                                       ByVal p_pass As String,
+                                       ByVal p_id_nivel As String) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "SPACTUALIZADONANTE"
+                .CommandText = "SPACTUALIZAEMPLEADO"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("V_ID_EMPLEADO", OracleDbType.Int32).Value = p_id_empleado
                 .Parameters.Add("V_NOMBRE", OracleDbType.Varchar2).Value = p_nombre
@@ -637,14 +639,16 @@ Public Class clsControladorProcedimientos
                 .Parameters.Add("V_FECHA_NACIMIENTO", OracleDbType.Date).Value = p_fecha_nacimiento
                 .Parameters.Add("V_FECHA_ALTA", OracleDbType.Date).Value = p_fecha_alta
                 .Parameters.Add("V_USUARIO", OracleDbType.Varchar2).Value = p_usuario
-                .Parameters.Add("V_PASS", OracleDbType.Int32).Value = p_pass
+                .Parameters.Add("V_PASS", OracleDbType.Varchar2).Value = p_pass
+                .Parameters.Add("V_ID_NIVEL", OracleDbType.Int32).Value = p_id_nivel
+
 
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -706,9 +710,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -739,9 +743,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -783,9 +787,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -812,9 +816,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -849,9 +853,9 @@ Public Class clsControladorProcedimientos
 
             End With
             bd._Cmd.ExecuteNonQuery()
-            If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
-            End If
+
+            v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally
@@ -1005,7 +1009,7 @@ Public Class clsControladorProcedimientos
                                         e.fecha_nacimiento,
                                         e.fecha_alta,
                                         e.usuario,
-                                        e.pass, 
+                                        e.pass,  
                                         e.id_nivel 
                                 from EMPLEADO e "
             End With

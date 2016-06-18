@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmItemEmpleado.aspx.vb" Inherits="BancoSangre.frmItemEmpleado" %>
 
 <!DOCTYPE html>
-
+ 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -47,12 +47,12 @@ msgBox_B = function (titulo, texto) {
 
 fCerrarVentanaModelo = function () {
     parent.App.direct.fLlenarGrid();
-    parent.App.Win_EditarDonante.close();
+    parent.App.Win_EditarEmpleado.close();
 
 };
     </script>
 </head>
-<body>
+<%--<body>--%>
     <form id="form1" runat="server">
            <ext:ResourceManager runat="server" />
         <ext:FormPanel ID="frmeditarempleado" runat="server">
@@ -60,8 +60,6 @@ fCerrarVentanaModelo = function () {
             <Items>
                 <ext:TextField ID="txtCodigo" FieldLabel="Codigo" runat="server" LabelAlign="Top" Flex="1"/>
                 
-
-
                 <ext:FieldContainer runat="server" Layout="HBoxLayout">
 
                     <Items>
@@ -87,7 +85,7 @@ fCerrarVentanaModelo = function () {
                 <ext:FieldContainer runat="server" Layout="HBoxLayout">
                     <Items>
                         <ext:TextField MaxLength="50" FieldLabel="Usuario" ID="txtUser" LabelAlign="Top" runat="server"  AllowBlank="false" MarginSpec="5 5 5 5" Flex="1" />
-                        <ext:TextField MaxLength="50" FieldLabel="Clave" ID="txtPass" LabelAlign="Top" runat="server"  AllowBlank="false" MarginSpec="5 5 5 5" Flex="1" />
+                        <ext:TextField MaxLength="50" FieldLabel="Clave" ID="txtPass" InputType="Password" ReadOnly ="true" LabelAlign="Top" runat="server"  AllowBlank="false" MarginSpec="5 5 5 5" Flex="1" />
                         <ext:TextField MaxLength="50" FieldLabel="ID_NIVEL" ID="txtnivel" LabelAlign="Top" runat="server"  AllowBlank="false" MarginSpec="5 5 5 5" Flex="1" />
                    </Items>
                 </ext:FieldContainer>

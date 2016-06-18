@@ -41,9 +41,9 @@
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
                                 <ext:ToolbarSeparator />
                   
-                                <ext:Button ID="btnNuevoEmpleado" runat="server" Width="160" Text="Nuevo Empleado" Icon="Add">
+                                <ext:Button ID="btnNuevoModelo" runat="server" Width="160" Text="Nuevo Empleado" Icon="Add">
                                     <Listeners>
-                                        <Click Handler="App.direct.fcrearVentanaDonante(0,'','','','','','','','','',0)"></Click>
+                                        <Click Handler="App.direct.fcrearVentanaEmpleado(0,'','','','','','','','','','')"></Click>
                                     </Listeners>
                                 </ext:Button>
                                 <ext:ToolbarSeparator />
@@ -64,7 +64,7 @@
                             <ext:Column ID="Column7" runat="server" DataIndex="FECHA_NACIMIENTO" Text="Fecha Nac." Flex="1" />
                             <ext:Column ID="Column8" runat="server" DataIndex="FECHA_ALTA" Text="Fecha Alta" Flex="1" />
                             <ext:Column ID="Column9" runat="server" DataIndex="USUARIO" Text="Usuario" Flex="1" />
-                            <ext:Column ID="Column10" runat="server" DataIndex="PASS" Text="Clave" Flex="1" />
+                          <%--<ext:Column ID="Column10" runat="server" DataIndex="PASS" Type="Pasword" Text="Clave" Flex="1" />--%>
                             <ext:Column ID="Column11" runat="server" DataIndex="ID_NIVEL" Text="Nivel" Flex="1" />
                             <ext:CommandColumn runat="server" Width="30" Text="">
                                 <Commands>
