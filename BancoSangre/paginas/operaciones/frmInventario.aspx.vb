@@ -2,16 +2,20 @@
 
 Public Class frmInventario
     Inherits System.Web.UI.Page
-
+    Dim _buscar As Boolean
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Dim cls As New clsComunes
-        If CInt(Session("id_nivel")) > 1 Then
+       Dim cls As New clsComunes
+       If CInt(Session("id_nivel")) > 1 Then
             Response.Redirect(cls.Pagina_Acceso_Denegado)
 
         End If
+       If Request.QueryString.AllKeys.Contains("buscar") Then
+           ColumnaAccion.Visible = True
+        Else
+            ColumnaAccion.Visible = False
+       End If
         fLlenarGrid()
-
-    End Sub
+ End Sub
     <DirectMethod>
     Public Sub fLlenarGrid()
         Try

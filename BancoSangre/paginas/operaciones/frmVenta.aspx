@@ -71,9 +71,9 @@
                             </Items>
                         </ext:Container>
                         <ext:Container runat="server">
-                        <Items>
-                           <ext:ToolbarFill></ext:ToolbarFill>
-                        </Items>    
+                            <Items>
+                                <ext:ToolbarFill></ext:ToolbarFill>
+                            </Items>
                         </ext:Container>
                         <ext:Container runat="server">
                             <Items>
@@ -103,12 +103,12 @@
                                     <Model>
                                         <ext:Model runat="server" ID="mgParametro">
                                             <Fields>
-                                                <ext:ModelField Name="ID_DETALLE" />
-                                                <ext:ModelField Name="ID_VENTA" />
                                                 <ext:ModelField Name="ID_FACTOR" />
-                                                <ext:ModelField Name="CANT" />
+                                                <ext:ModelField Name="CANTIDAD" />
                                                 <ext:ModelField Name="FACTOR" />
+                                                <ext:ModelField Name="DESCRIPCION" />
                                                 <ext:ModelField Name="TOTAL" />
+                                                <ext:ModelField Name="SUBTOTAL" />
                                             </Fields>
                                         </ext:Model>
                                     </Model>
@@ -121,18 +121,18 @@
                                             <Listeners>
                                                 <Click Handler="App.direct.fQuitar();"></Click>
                                             </Listeners>
-                                            </ext:Button>
-                                        <ext:TextField runat="server" ID="txtModelo" EmptyText="FACTOR" MaxLengthText="100" Width="100" />
-                                        
+                                        </ext:Button>
+                                        <ext:TextField runat="server" ID="txtIdFactor" EmptyText="CODIGO" MaxLengthText="100" Width="100" />
+                                        <ext:TextField runat="server" ID="txtFactor" EmptyText="FACTOR" MaxLengthText="100" Width="100" />
                                         <ext:ToolbarSeparator />
 
                                         <ext:Button ID="btnBuscar1" runat="server" ToolTip="Buscar" Icon="Zoom">
                                             <Listeners>
-                                                <Click Handler="App.direct.BuscarInventario(App.txtModelo.value, App.txtFamilia.value, App.txtMaterial.value, App.txtProducto.value)"></Click>
+                                                <Click Handler="App.direct.BuscarInventario()"></Click>
                                             </Listeners>
                                         </ext:Button>
 
-                                        <ext:NumberField runat="server" ID="txtCant" MinValue="1" Width="50" />
+                                        <ext:NumberField runat="server" ID="txtCant" MinValue="1" Width="100" />
                                         <ext:Button runat="server" ID="btnAgregar" Icon="Add" ToolTip="Producto">
                                             <Listeners>
                                                 <Click Handler="insertar();" />
@@ -150,11 +150,10 @@
                                     <ext:Column runat="server" ID="Column2" Text="CANTIDAD" Width="100" Alig="Right" DataIndex="CANTIDAD" />
                                     <ext:Column runat="server" ID="Column1" Text="FACTOR" Flex="1" Align="Left" DataIndex="FACTOR" />
                                     <ext:Column runat="server" ID="Column3" Text="DESCRIPCION" Flex="1" Align="Center" DataIndex="DESCRIPCION" />
-                                    <ext:Column runat="server" ID="Column5" Text="PRECIO (Q)" Flex="1" Align="Center" DataIndex="PRECIO">
-                                        <Renderer Format="UsMoney"></Renderer>
+                                    <ext:Column runat="server" ID="Column5" Text="PRECIO (Q)" Flex="1" Align="Center" DataIndex="TOTAL">
                                     </ext:Column>
                                     <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL">
-                                        <Renderer Format="UsMoney"></Renderer>
+                          
                                     </ext:Column>
                                     <ext:CommandColumn ID="CommandColumn4" runat="server" Flex="1" Text="Tareas" Align="Center">
                                         <Commands>
